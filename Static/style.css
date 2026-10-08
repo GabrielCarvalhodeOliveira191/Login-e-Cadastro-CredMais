@@ -1,0 +1,292 @@
+:root {
+    --azul: #1A67F5;
+    --azul-escuro: #111111;
+    --azul-claro: #D1E3FF;
+
+    --verde: #40BE76;
+    --verde-claro: #DDF5E7;
+
+    --vermelho: #F44A4D;
+    --vermelho-claro: #FDEBEC;
+
+    --fundo: #F5F7FB;
+    --cinza-claro: #DCE5F1;
+    --cinza-texto: #7184B0;
+    --branco: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    overflow: hidden;
+}
+
+.pagina {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px 20px;
+
+    background-image: url("/fundo");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.card {
+    width: 390px;
+    height: 535px;
+
+    background: var(--branco);
+
+    border-radius: 12px;
+
+    padding: 30px 22px 15px;
+
+    position: relative;
+    z-index: 2;
+
+    box-shadow: 0 2px 15px rgba(15, 47, 115, 0.06);
+}
+
+.logo-area {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+.logo {
+    width: 205px;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+.cabecalho {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.cabecalho h1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+
+    color: var(--azul-escuro);
+
+    margin-bottom: 4px;
+}
+
+.cabecalho p {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    color: var(--cinza-texto);
+}
+
+.campo {
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.campo label {
+    display: block;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: var(--azul-escuro);
+
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.campo input {
+    width: 100%;
+    height: 41px;
+
+    padding: 0 12px;
+
+    border: 1px solid var(--cinza-claro);
+    border-radius: 11px;
+
+    outline: none;
+
+    background: var(--branco);
+
+    color: var(--azul-escuro);
+
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.campo input::placeholder {
+    color: var(--cinza-texto);
+    opacity: 1;
+}
+
+.campo input:focus {
+    border-color: var(--azul);
+}
+
+button {
+    width: 100%;
+    height: 43px;
+
+    margin-top: 10px;
+    margin-bottom: 7px;
+    border: 1px solid var(--azul);
+    border-radius: 11px;
+
+    background: var(--azul-claro);
+
+    color: var(--azul);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #BDD6FF;
+    color: var(--azul);
+}
+
+.links {
+    width: 100%;
+    text-align: center;
+}
+
+.links p {
+    margin-top: 7px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: var(--azul);
+}
+
+.links a {
+    color: var(--azul);
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.voltar {
+    display: inline-block;
+
+    margin-top: 16px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    color: var(--azul);
+}
+
+@media (max-width: 600px) {
+
+    html,
+    body {
+        overflow: auto;
+    }
+
+    .pagina {
+        min-height: 100vh;
+        height: auto;
+
+        padding: 15px 10px;
+
+        background-position: center;
+        background-size: cover;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 390px;
+        height: auto;
+        min-height: 520px;
+
+        padding: 30px 20px 20px;
+    }
+
+    .logo-area {
+        margin-top: -10px;
+        margin-bottom: 25px;
+    }
+
+    .logo {
+        width: 195px;
+    }
+
+    .cabecalho h1 {
+        font-size: 23px;
+    }
+
+    .cabecalho p {
+        font-size: 12px;
+    }
+
+    .campo {
+        margin-bottom: 14px;
+    }
+
+    .campo input {
+        height: 43px;
+    }
+
+    button {
+        height: 44px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .pagina {
+        padding: 10px;
+    }
+
+    .card {
+        min-height: 500px;
+        padding: 25px 17px 18px;
+    }
+
+    .logo {
+        width: 175px;
+    }
+
+    .cabecalho h1 {
+        font-size: 21px;
+    }
+}

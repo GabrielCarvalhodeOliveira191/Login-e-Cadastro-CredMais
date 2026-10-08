@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Realizar Login</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='estilo.css') }}"
+    >
+</head>
+
+<body>
+
+    <main class="pagina">
+
+        <div class="card">
+
+            <div class="logo-area">
+                <img
+                    src="{{ url_for('logo') }}"
+                    alt="Logo"
+                    class="logo"
+                >
+            </div>
+
+            <div class="cabecalho">
+                <h1>Acesse sua conta</h1>
+
+                <p>
+                    Entre com seus dados para acessar sua conta.
+                </p>
+            </div>
+
+            <form action="{{ url_for('login') }}" method="post">
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Ex: usuario123@gmail.com"
+                        required
+                    >
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Ex: senha123"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="entrar">
+                    Entrar
+                </button>
+
+                <a
+                    href="{{ url_for('cadastro') }}"
+                    class="botao"
+                >
+                    Criar Conta
+                </a>
+
+            </form>
+
+            <a
+                href="{{ url_for('inicio') }}"
+                class="voltar"
+            >
+                Voltar
+            </a>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>
